@@ -1,2 +1,4 @@
 # WP1
-Plataforma de Waposat
+Desarrollo de plataforma para la visualización de estaciones de monitoreo multiples.
+
+Let's the game beging :D
