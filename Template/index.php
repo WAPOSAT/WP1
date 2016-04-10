@@ -6,18 +6,15 @@
     
     <!-- Including general head -->
     <?php  include_once("../include/head.general.php");?>
-    
     <!-- Especific CSS -->
-    <link href="monitoreo/style.monitoreo.css" rel="stylesheet">
-    
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <link href="index/style.index.css" rel="stylesheet">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     
     <!-- Especific JS -->
-    <?php  include_once("monitoreo/maps.scriptJS.php"); ?>
     <script src="../js/Chart.js"></script>
-    <script src="monitoreo/monitoreo.js"></script>
+    <script src="index/index.js"></script>
     
-    <script src="monitoreo/CuadroMonitoreo.js"></script>
+    <!-- <script src="monitoreo/CuadroMonitoreo.js"></script> -->
     
 </head>
 
@@ -44,5 +41,7 @@
     
     
 </body>
-    
+
+<!-- Cargando info del mapa-->    
+<?php  include_once("index/maps.load.php"); ?>
 </html>
