@@ -14,7 +14,10 @@
     <script src="../js/Chart.js"></script>
     <script src="index/index.js"></script>
     
+    
+    
     <!-- <script src="monitoreo/CuadroMonitoreo.js"></script> -->
+    
     
 </head>
 
@@ -39,9 +42,8 @@
     <!-- Footer -->
     <?php include_once("../include/footer.general.php"); ?>
     
+    <!-- Cargando info del mapa-->    
+    <?php  include_once("index/maps.load.php"); ?>
     
 </body>
-
-<!-- Cargando info del mapa-->    
-<?php  include_once("index/maps.load.php"); ?>
 </html>

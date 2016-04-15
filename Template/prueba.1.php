@@ -22,8 +22,7 @@
 
 <!-- Cargando info del mapa-->    
 <script type='text/javascript' languaje='javascript'>
-    var ArrayDataTime = {},
-            ChartData = 15;
+    var ArrayDataTime = {};
 	function cargar_cuadro_datos_integrante (){
         // Programa Ajax para pedir DataTime
         $parametros = {
