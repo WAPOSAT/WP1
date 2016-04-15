@@ -13,7 +13,7 @@ class estaciones {
     }
     
     public function mostrar_todas () {
-        $sql = "SELECT * FROM estaciones ORDER BY id_estacion DESC";
+        $sql = "SELECT * FROM estaciones WHERE Activo=1 ORDER BY id_estacion DESC";
         $this->_conexion->ejecutar_sentencia($sql);
     }
     
