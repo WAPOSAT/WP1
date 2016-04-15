@@ -30,8 +30,13 @@
             //Configurando los eventos de los Markers 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                  infowindow.setContent(pointMarker[i].name);
-                  infowindow.open(map, marker);
+                    infowindow.setContent(pointMarker[i].name);
+                    infowindow.open(map, marker);
+                    $( "#map-canvas" ).removeClass( "col-md-12" ).addClass( "col-md-6" );
+                    $( "#container" ).removeClass( "col-md-12" ).addClass( "col-md-6" );
+                    map.setCenter(marker.getPosition());
+                    CargarCuadroGraficas (pointMarker[i].id);
+                    
                 }
             })(marker, i));
         }
@@ -43,7 +48,7 @@
                 'boton-obtener-data-mapa' : true,
             };
 
-        $url = "index/data.maps.probe.php";
+        $url = "index/data.maps.PM.php";
         $.ajax({
             type: "POST",
             url: $url,

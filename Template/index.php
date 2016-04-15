@@ -13,10 +13,7 @@
     <!-- Especific JS -->
     <script src="../js/Chart.js"></script>
     <script src="index/index.js"></script>
-    
-    
-    
-    <!-- <script src="monitoreo/CuadroMonitoreo.js"></script> -->
+    <script src="index/CuadroMonitoreo.js"></script>
     
     
 </head>
