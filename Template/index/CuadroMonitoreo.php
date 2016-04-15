@@ -4,6 +4,7 @@ require_once ("../../require/RelacionEquipo.class.php");
 require_once ("../../require/parametros.class.php");
 
 $id_equipo = $_POST["id_equipo"];
+$Animation = $_POST["AnimationState"];
 
 $RelacionEquipo = new RelacionEquipo();
 $parametros = new parametros();

@@ -28,12 +28,6 @@ var fechaText,
     longData = 0,
     valMin;
 
-$(function(){
-    $("#MTemp").click(function(){
-        GenerateChart (1, 2, 1000, "myChart",20);
-    });
-});
-
 function GenerateChart (id_equipo_env, id_parametro_env, periodo_env, IdChart_env,numData_env){
     id_equipo = id_equipo_env;
     id_parametro = id_parametro_env;
