@@ -34,7 +34,7 @@
                     infowindow.open(map, marker);
                     $( "#map-canvas" ).removeClass( "col-md-12" ).addClass( "col-md-6" );
                     $( "#container" ).removeClass( "col-md-12" ).addClass( "col-md-6" );
-                    map.setCenter(marker.getPosition());
+                    //map.setCenter(marker.getPosition());
                     AnimationState = 0;
                     CargarCuadroGraficas (pointMarker[i].id);
                     

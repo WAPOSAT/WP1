@@ -18,8 +18,8 @@ while($marker = $estaciones->retornar_SELECT()){
     $point = array('id' => $id, 'lat' =>$Latitud, 'lng' =>$Longitud, 'name' =>$nombre, 'codename' =>$codeName, 'imgpuntero'=>"../img/PointSensor.png");
     array_push($pointMarker, $point);
 }
-
-$mapOption = array('zoom'=>13, 'centerPosition' => [40.623813,-8.734692]);
+ 
+$mapOption = array('zoom'=>11, 'centerPosition' => [-11.899385,-77.007952]);
 
 $arr = array('pointMarker' => $pointMarker, 'mapOption' => $mapOption );
 echo json_encode($arr);
