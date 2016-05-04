@@ -57,15 +57,19 @@ $N = round($DO,2);
 
 if ($numS>=1){
     $monitoreo->registrar_valor($IDS1, $id_equipo, $PH);
+    echo ("pH: ".$PH."<br>");
 }
 if ($numS>=2){
     $monitoreo->registrar_valor($IDS2, $id_equipo, $Temp);
+    echo ("Temp: ".$PH."<br>");
 }
 if ($numS>=3){
     $monitoreo->registrar_valor($IDS3, $id_equipo, $DO);
+    echo ("DO: ".$PH."<br>");
 }
 if ($numS>=4){
     $monitoreo->registrar_valor($IDS4, $id_equipo, $N);
+    echo ("Nivel: ".$PH."<br>");
 }
 
 // Mensaje de verificacion
