@@ -7,16 +7,16 @@ require_once ("../require/monitoreo.class.php");
 
 $id_equipo = htmlspecialchars($_GET["equipo"],ENT_QUOTES);
 $numS = htmlspecialchars($_GET["numS"],ENT_QUOTES);
-if ($num>=1){
+if ($numS>=1){
     $IDS1  = htmlspecialchars($_GET["IDS1"],ENT_QUOTES);
 }
-if ($num>=2){
+if ($numS>=2){
     $IDS2  = htmlspecialchars($_GET["IDS2"],ENT_QUOTES);
 }
-if ($num>=3){
+if ($numS>=3){
     $IDS3  = htmlspecialchars($_GET["IDS3"],ENT_QUOTES);
 }
-if ($num>=4){
+if ($numS>=4){
     $IDS4  = htmlspecialchars($_GET["IDS4"],ENT_QUOTES);
 }
 
@@ -55,16 +55,16 @@ $aleatorio2N = rand(0,100)/100;
 $N = $aleatorioN*$aleatorio2N*0.3+(-1*cos(($hora)*$PI/12)*0.3)+4.01;
 $N = round($DO,2);
 
-if ($num>=1){
+if ($numS>=1){
     $monitoreo->registrar_valor($IDS1, $id_equipo, $PH);
 }
-if ($num>=2){
+if ($numS>=2){
     $monitoreo->registrar_valor($IDS2, $id_equipo, $Temp);
 }
-if ($num>=3){
+if ($numS>=3){
     $monitoreo->registrar_valor($IDS3, $id_equipo, $DO);
 }
-if ($num>=4){
+if ($numS>=4){
     $monitoreo->registrar_valor($IDS4, $id_equipo, $N);
 }
 
