@@ -172,7 +172,7 @@ while($valores = $RelacionEquipo->retornar_SELECT()){
 <script>
     var id_equipo_rec = <?php echo $id_equipo;?>;
     function verGraf(id_parametro){
-       GenerateChart (id_equipo_rec , id_parametro, 1000, "myChart",20); 
+       GenerateChart (id_equipo_rec , id_parametro, 3000, "myChart",20); 
     }
     
     $( document ).ready(function() {
