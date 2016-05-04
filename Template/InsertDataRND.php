@@ -1,6 +1,6 @@
 <?php
-require_once ("../require/conexion_class.php");
-require_once ("../require/monitoreo_class.php");
+require_once ("../require/conexion.class.php");
+require_once ("../require/monitoreo.class.php");
 
 // URL tipo
 // /estaciones.waposat.com/public_html/Template/InsertDataRND.php?id_equipo=1&numS=3&IDS1=1&IDS2=2&IDS3=3
