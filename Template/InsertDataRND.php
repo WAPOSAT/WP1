@@ -61,15 +61,15 @@ if ($numS>=1){
 }
 if ($numS>=2){
     $monitoreo->registrar_valor($IDS2, $id_equipo, $Temp);
-    echo ("Temp: ".$PH."<br>");
+    echo ("Temp: ".$Temp."<br>");
 }
 if ($numS>=3){
     $monitoreo->registrar_valor($IDS3, $id_equipo, $DO);
-    echo ("DO: ".$PH."<br>");
+    echo ("DO: ".$DO."<br>");
 }
 if ($numS>=4){
     $monitoreo->registrar_valor($IDS4, $id_equipo, $N);
-    echo ("Nivel: ".$PH."<br>");
+    echo ("Nivel: ".$N."<br>");
 }
 
 // Mensaje de verificacion
