@@ -5,7 +5,7 @@ require_once ("../require/monitoreo.class.php");
 // URL tipo
 // /estaciones.waposat.com/public_html/Template/InsertDataRND.php?id_equipo=1&numS=3&IDS1=1&IDS2=2&IDS3=3
 
-$id_equipo = htmlspecialchars($_GET["equipo"],ENT_QUOTES);
+$id_equipo = htmlspecialchars($_GET["id_equipo"],ENT_QUOTES);
 $numS = htmlspecialchars($_GET["numS"],ENT_QUOTES);
 if ($numS>=1){
     $IDS1  = htmlspecialchars($_GET["IDS1"],ENT_QUOTES);
