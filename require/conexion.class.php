@@ -18,7 +18,7 @@ class conexion {
         /*
         $this->_conexion = mysql_connect("localhost", "root", "jibf123") or die('No pudo conectarse: ' . mysql_error());
 	$this->_base_datos = mysql_select_db("DB_waposat");
-        
+        */
         
 	}
 	public function ejecutar_sentencia ($sql) {
