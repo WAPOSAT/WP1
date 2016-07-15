@@ -66,7 +66,7 @@ while($valores = $monitoreo->retornar_SELECT()){
 
 //Trabajando con la ultima fecha
 $date = strtotime($date);
-$mesText = $months[date('n', $date)];
+$mesText = $months[date('n', $date)-1];
 $dia = date('d', $date);
 $hora = date('H', $date);
 $fechaText = "Dia: ".$mesText."-".$dia." ".$hora."horas";
