@@ -18,6 +18,16 @@ class monitoreo {
         $this->_conexion->ejecutar_sentencia($sql);
     }
     
+    public function showValuesDate ($id_sensor, $id_equipo, $date){
+        $sql = "SELECT * FROM monitoreo WHERE id_sensor='".$id_sensor."' AND id_equipo='".$id_equipo."' AND fecha BETWEEN '".$date." 00:00:00' AND '".$date." 23:59:59' ORDER BY id_monitoreo DESC";
+        $this->_conexion->ejecutar_sentencia($sql);
+    }
+    
+    public function showValuesBetweenDates ($id_sensor, $id_equipo, $date1, $date2){
+        $sql = "SELECT * FROM monitoreo WHERE id_sensor='".$id_sensor."' AND id_equipo='".$id_equipo."' AND fecha BETWEEN '".$date1." 00:00:00' AND '".$date2." 23:59:59' ORDER BY id_monitoreo DESC";
+        $this->_conexion->ejecutar_sentencia($sql);
+    }
+    
     public function mostrar_NewValues($id_sensor, $id_equipo, $lastID){
         $sql = "SELECT * FROM monitoreo WHERE id_sensor='".$id_sensor."' AND id_equipo='".$id_equipo."' AND id_monitoreo>".$lastID." ORDER BY id_monitoreo DESC";
         $this->_conexion->ejecutar_sentencia($sql);
