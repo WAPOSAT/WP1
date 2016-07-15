@@ -1,10 +1,11 @@
-function chargeValuesDate (id_equipo) {
+function chargeValuesDate () {
     $parametros = {
             'boton-llamar-cuadro-Graficas' : true,
-            'id_equipo' : id_equipo,
-            'AnimationState' : AnimationState,
+            'id_equipo' : $("#Station").val(),
+            'Date1' : document.getElementById("Date1").value,
+            'Date2' : document.getElementById("Date1").value,
         };
-    $url = "index/CuadroMonitoreo.php";
+    $url = "showperiod/static.monitoring.screen.php";
     $.ajax({
         type: "POST",
         url: $url,
