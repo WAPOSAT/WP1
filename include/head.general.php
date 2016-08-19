@@ -3,6 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Monitoreo de la calidad del agua">
 <meta name="author" content="WAPOSAT">
+<link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+
 
 <!-- Bootstrap Core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
