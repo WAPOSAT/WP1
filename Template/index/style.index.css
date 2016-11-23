@@ -12,6 +12,21 @@
 	color: #1D648E;
 }
 
+.max {
+	color: #4DB4DE;	
+}
+
+.mean {
+	color: #1D648E;	
+}
+
+.min {
+	color: #5BB598;	
+}
+
+.last {
+	color: #ABD099;	
+}
 @media (max-width: 830px) {
   #last-sensor-value {
     font-size: 6em;
@@ -23,4 +38,23 @@
 		font-size: 1em;
 		font-weight: bold; 
 	}
+	#container2{
+		height: 150px;
+	}
+
+
+
+	.carousel {
+    margin-bottom: 7%;
+  }   
+  .carousel-indicators {
+    bottom: auto;
+    top: 100%;
+  }
+  .carousel-indicators li {
+    border-color: #666;
+  }
+  .carousel-indicators .active {
+    background-color: #666;
+  }
 }
