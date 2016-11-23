@@ -7,7 +7,7 @@
                 </h4>
                 <ul class="list-unstyled">
                     <li><i class="fa fa-phone fa-fw"></i> (51)-944271772</li>
-                    <li><i class="fa fa-envelope-o fa-fw"></i> info@waposat.com </li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> jhosept@waposat.com </li>
                 </ul>
                 <br>
                 <ul class="list-inline">

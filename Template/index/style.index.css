@@ -1,18 +1,26 @@
-#map-canvas {
-	height:85%;
-    right:0px;
-    top:0px;
-    bottom:50px;
-    }
-
-#area-graficos, #myChart{
-	float:left;
-	height: 100%;
-	width:50%;
-	margin: 0px;
-	padding: 0px;
+.parameter-info{
+	font-size: 5em;
 }
 
-.tab-content{
-    height:100%;
+#last-sensor-value{
+	font-size: 9em;
+	font-weight: bold; 
+}
+
+#last-measure-date{
+	font-size: 2em;
+	color: #1D648E;
+}
+
+@media (max-width: 830px) {
+  #last-sensor-value {
+    font-size: 6em;
+  }
+  .parameter-info{
+		font-size: 3em;
+  }
+  #last-measure-date{
+		font-size: 1em;
+		font-weight: bold; 
+	}
 }
