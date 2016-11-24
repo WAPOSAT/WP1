@@ -112,10 +112,10 @@
               <p id="advice">Hemos detectado que el valor actual esta por encima de la media, recomendamos utilizar el agua en este momento</p>
             </div>
             <div class="col-md-7 col-xs-5 text-center">
-              <p id="max-value"><strong class="max">Maximo:</strong>3450.98 mg/L</p>
-              <p id="mean-value"><strong class="mean">Media:</strong>3276.48 mg/L</p>
-              <p id="min-value"><strong class="min">Minimo:</strong>2900.97 mg/L</p>
-              <p id="last-value"><strong class="last">Ultimo:</strong>3560.54 mg/L</p>
+              <p id="max-value"><strong class="max">Maximo:</strong>9.57</p>
+              <p id="mean-value"><strong class="mean">Media:</strong>7.64</p>
+              <p id="min-value"><strong class="min">Minimo:</strong>6.95</p>
+              <p id="last-value"><strong class="last">Ultimo:</strong>7.65</p>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@
             },
 
             title: {
-                text: 'mg/L VS Tiempo'
+                text: 'ph VS Tiempo'
             },
 
             yAxis: {
@@ -235,7 +235,7 @@
             },
 
             title: {
-                text: 'mg/L VS Tiempo'
+                text: 'ph VS Tiempo'
             },
 
             yAxis: {
