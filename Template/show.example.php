@@ -35,10 +35,10 @@
       <div class="item active">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >Potencial Redox</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
           </div>
           <div id="last-sensor-value" class="col-md-12 text-center">
-            4234.0 mg/L
+            7.65 
           </div>
         </div>
         <div  class="col-md-12" style="height: 50px; min-width: 310px"></div>
@@ -49,10 +49,10 @@
       <div class="item">
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >Potencial Redox</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
           </div>
           <div class="col-md-12 text-center" >
-            <div id="last-measure-date" class="col-md-12" > Ultima medicion: 2016-11-21 18:00:05</div>
+            <div id="last-measure-date" class="col-md-12" > Ultima medicion: 2016-11-24 16:00:05</div>
             <div class="col-md-8 col-md-offset-2 col-xs-12 ">
               <div id="container" style="height: 250px" ></div>  
             </div>
@@ -65,7 +65,7 @@
       <div class="item">
         <div id="screen-3" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >Potencial Redox</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
           </div>
           <div id="parameter-teory" class="col-md-8 col-md-offset-2 col-xs-12">
             
@@ -77,15 +77,15 @@
               </div>
               <div class="col-md-2">
                 <strong class="text-center btn btn-success">[0-6> NORMAL</strong>
-                <p class="text-justify"> El agua es acida, lo cual es perjudicial para el proceso de embotellamiento</p>
+                <p class="text-justify"> El agua es optima para su uso.</p>
               </div>
               <div class="col-md-2">
                 <strong class="text-center btn btn-warning"><6-8> ALETA</strong>
-                <p class="text-justify"> El agua es acida, lo cual es perjudicial para el proceso de embotellamiento</p>
+                <p class="text-justify"> El agua es basica, lo cual es perjudicial para el proceso de embotellamiento.</p>
               </div>
               <div class="col-md-2">
-                <strong class="text-center btn btn-danger">[0-6> NORMAL</strong>
-                <p class="text-justify"> El agua es acida, lo cual es perjudicial para el proceso de embotellamiento</p>
+                <strong class="text-center btn btn-danger">[8-14> PELIGRO</strong>
+                <p class="text-justify"> El agua es demasiado basica, lo cual es perjudicial para el proceso de embotellamiento.</p>
               </div>
             </div>
 
@@ -102,7 +102,7 @@
       <div class="item">
         <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >Potencial Redox</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
           </div>
           <div class="col-md-6 col-md-offset-1 col-xs-12 ">
             <div id="container2" style="height: 250px" ></div>  
