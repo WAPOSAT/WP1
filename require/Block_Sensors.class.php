@@ -8,11 +8,16 @@ class Block_Sensors {
         $this->_conexion = new conexion();
     }
     
-    public function get_block ($id){
+    public function getblock_byId ($id){
         $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id=".$id." ";
         $this->_conexion->ejecutar_sentencia($sql);
     }
-    
+
+    public function getblock_Sensor ($id_block, $id_sensor){
+        $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id_block=".$id_block." AND id_sensor=".$id_sensor." ";
+        $this->_conexion->ejecutar_sentencia($sql);
+    }    
+
     public function retornar_SELECT(){
 		return $this->_conexion->retornar_array();
 	}
