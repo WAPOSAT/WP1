@@ -73,7 +73,7 @@ $(function () {
     // Generando los cambios de informacion del sensor
     
     // Cambiando la informacion general
-    for(a=1; a<=slides; a++){
+    for(var a=1; a<=slides; a++){
       $("#parameter-name-"+a).html(data.SensorName);
 
         var state="btn btn-success btn-lg";
@@ -90,6 +90,7 @@ $(function () {
       $("#parameter-state-"+a).addClass(state);
       $("#parameter-state-"+a).html(content_state);
     }
+
       $("#last-sensor-value").html(data.Last.Value);
 
       $("#parameter-teory").html(data.InfoParameter);
