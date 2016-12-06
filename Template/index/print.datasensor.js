@@ -90,6 +90,7 @@ $(function () {
       $("#parameter-state-"+a).addClass(state);
       $("#parameter-state-"+a).html(content_state);
     }
+      $("#last-sensor-value").html(data.Last.Value);
 
       $("#parameter-teory").html(data.InfoParameter);
       $("#last-measure-date").html("Ultima medición: "+data.DateText);

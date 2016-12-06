@@ -41,8 +41,7 @@
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
           </div>
-          <div id="last-sensor-value" class="col-md-12 text-center">
-            7.65 
+          <div id="last-sensor-value" class="col-md-12 text-center"> 
           </div>
         </div>
         <div  class="col-md-12" style="height: 50px; min-width: 310px"></div>

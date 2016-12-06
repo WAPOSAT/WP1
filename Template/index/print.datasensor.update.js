@@ -30,6 +30,7 @@ function DataSensorUpdate (id_bs){
 	      $("#parameter-state-"+a).html(content_state);
 	    }
 
+	    $("#last-sensor-value").html(data.Last.Value);
       $("#last-measure-date").html("Ultima medición: "+data.DateText);
 
       $("#max-value").html("<strong class='max'>Maximo:</strong>"+data.MaxValue+" "+data.Unit);
