@@ -17,6 +17,7 @@ $Parameters = new Parameters();
 $Blocks = new Blocks();
 
 $id = $_GET["BS"];
+$last = $_GET["last"];
 //$id = 2;
 
 //$time = $_GET["time_type"];

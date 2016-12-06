@@ -1,3 +1,7 @@
+<?php
+  $id = $_GET["ID"];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,10 +36,10 @@
       
 
     <!--  Primera Vista -->
-      <div class="item active">
+      <div class="item">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
           </div>
           <div id="last-sensor-value" class="col-md-12 text-center">
             7.65 
@@ -46,13 +50,13 @@
 
 
       <!--  Segunda Vista -->
-      <div class="item">
+      <div class="item active">
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name-2" ></strong> <button id="parameter-state-2" type="button" class="btn btn-success"></button>
           </div>
           <div class="col-md-12 text-center" >
-            <div id="last-measure-date" class="col-md-12" > Ultima medicion: 2016-11-24 16:00:05</div>
+            <div id="last-measure-date" class="col-md-12" ></div>
             <div class="col-md-8 col-md-offset-2 col-xs-12 ">
               <div id="container" style="height: 250px" ></div>  
             </div>
@@ -65,30 +69,13 @@
       <div class="item">
         <div id="screen-3" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name-3" ></strong> <button id="parameter-state-3" type="button" class="btn btn-success"></button>
           </div>
           <div id="parameter-teory" class="col-md-8 col-md-offset-2 col-xs-12">
             
             <!-- Contenido de la tercera vista -->
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="text-center">pH: Potencial de Hidrogeno</h3>
-                <p class="text-justify">El potencial hidrógeno o pH, es un parámetro de suma importancia tanto para aguas naturales como aguas residuales. El rango de pH en el cual pueden interactuar los ecosistemas y sobrevivir las especies que lo conforman, está sumamente restringido, por lo cual si este valor es alterado, los procesos biológicos que normalmente se llevan a cabo pueden ser perturbados y/o inhibidos y las consecuencias son adversas.</p>
-              </div>
-              <div class="col-md-2">
-                <strong class="text-center btn btn-success">[0-6> NORMAL</strong>
-                <p class="text-justify"> El agua es optima para su uso.</p>
-              </div>
-              <div class="col-md-2">
-                <strong class="text-center btn btn-warning"><6-8> ALETA</strong>
-                <p class="text-justify"> El agua es basica, lo cual es perjudicial para el proceso de embotellamiento.</p>
-              </div>
-              <div class="col-md-2">
-                <strong class="text-center btn btn-danger">[8-14> PELIGRO</strong>
-                <p class="text-justify"> El agua es demasiado basica, lo cual es perjudicial para el proceso de embotellamiento.</p>
-              </div>
-            </div>
-
+            
+            <!-- Fin del contenido de la tercera vista -->
 
 
           </div>
@@ -102,20 +89,20 @@
       <div class="item">
         <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name" >PH</strong> <button id="parameter-state" type="button" class="btn btn-success">NORMAL</button>
+            <strong id="parameter-name-4" ></strong> <button id="parameter-state-4" type="button" class="btn btn-success"></button>
           </div>
           <div class="col-md-6 col-md-offset-1 col-xs-12 ">
             <div id="container2" style="height: 250px" ></div>  
           </div>
           <div class="col-md-5 col-xs-12 text-justify">
             <div class="col-md-7 col-xs-7" >
-              <p id="advice">Hemos detectado que el valor actual esta por encima de la media, recomendamos utilizar el agua en este momento</p>
+              <p id="advice"></p>
             </div>
             <div class="col-md-7 col-xs-5 text-center">
-              <p id="max-value"><strong class="max">Maximo:</strong>9.57</p>
-              <p id="mean-value"><strong class="mean">Media:</strong>7.64</p>
-              <p id="min-value"><strong class="min">Minimo:</strong>6.95</p>
-              <p id="last-value"><strong class="last">Ultimo:</strong>7.65</p>
+              <p id="max-value"></p>
+              <p id="mean-value"></p>
+              <p id="min-value"></p>
+              <p id="last-value"></p>
             </div>
           </div>
         </div>
@@ -144,145 +131,12 @@
       interval: 1000 * 10
     });
     
+    // obteniendo la varible GET
+    var ID_BS = <?php echo $id ?>;
 
-    // Tomando datos
+  </script>
 
-    var num0;
-    var num1;
-    $(function () {
-    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=usdeur.json&callback=?', function (data) {
+  <script type="text/javascript" src="index/print.datasensor.js"></script>
 
-        var startDate = new Date(data[data.length - 1][0]), // Get year of last data point
-            minRate = 1,
-            maxRate = 0,
-            startPeriod,
-            date,
-            rate,
-            index;
-
-        startDate.setMonth(startDate.getMonth() - 5); // a quarter of a year before last data point
-        startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-
-        for (index = data.length - 1; index >= 0; index = index - 1) {
-            date = data[index][0]; // data[i][0] is date
-            rate = data[index][1]; // data[i][1] is exchange rate
-            if (date < startPeriod) {
-                break; // stop measuring highs and lows
-            }
-            if (rate > maxRate) {
-                maxRate = rate;
-            }
-            if (rate < minRate) {
-                minRate = rate;
-            }
-        }
-
-        // Create the chart
-        num0 = Highcharts.stockChart('container', {
-
-            rangeSelector: {
-                selected: 1
-            },
-
-            title: {
-                text: 'ph VS Tiempo'
-            },
-
-            yAxis: {
-                title: {
-                    text: 'Exchange rate'
-                },
-                plotLines: [{
-                    value: minRate,
-                    color: 'green',
-                    dashStyle: 'shortdash',
-                    width: 2,
-                    label: {
-                        text: 'Last quarter minimum'
-                    }
-                }, {
-                    value: maxRate,
-                    color: 'red',
-                    dashStyle: 'shortdash',
-                    width: 2,
-                    label: {
-                        text: 'Last quarter maximum'
-                    }
-                }]
-            },
-
-            credits: {
-                position: {
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            },
-
-            series: [{
-                name: 'USD to EUR',
-                data: data,
-                tooltip: {
-                    valueDecimals: 4
-                }
-            }]
-        });
-
-        // Create the chart
-        num1 = Highcharts.stockChart('container2', {
-
-            rangeSelector: {
-                selected: 1
-            },
-
-            title: {
-                text: 'ph VS Tiempo'
-            },
-
-            yAxis: {
-                title: {
-                    text: 'Exchange rate'
-                },
-                plotLines: [{
-                    value: minRate,
-                    color: 'green',
-                    dashStyle: 'shortdash',
-                    width: 2,
-                    label: {
-                        text: 'Last quarter minimum'
-                    }
-                }, {
-                    value: maxRate,
-                    color: 'red',
-                    dashStyle: 'shortdash',
-                    width: 2,
-                    label: {
-                        text: 'Last quarter maximum'
-                    }
-                }]
-            },
-
-            credits: {
-                position: {
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            },
-
-            series: [{
-                name: 'USD to EUR',
-                data: data,
-                tooltip: {
-                    valueDecimals: 4
-                }
-            }]
-        });
-
-
-    });
-});
-
-
-
-    </script>
 </body>
 </html>

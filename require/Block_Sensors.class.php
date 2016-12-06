@@ -9,8 +9,9 @@ class Block_Sensors {
     }
     
     public function getblock_byId ($id){
-        $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id=".$id." ";
+        $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id=".$id." LIMIT 1 ";
         $this->_conexion->ejecutar_sentencia($sql);
+        return $this->retornar_SELECT();
     }
 
     public function getblock_Sensor ($id_block, $id_sensor){
