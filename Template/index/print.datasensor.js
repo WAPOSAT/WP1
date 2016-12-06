@@ -13,6 +13,7 @@ var slides = 4;
 $(function () {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
     
+    $("#last-sensor-value").html(data.Last.Value);
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
       var d = new Date(data.Data.Date[a]).getTime();
@@ -91,7 +92,7 @@ $(function () {
       $("#parameter-state-"+a).html(content_state);
     }
 
-      $("#last-sensor-value").html(data.Last.Value);
+      
 
       $("#parameter-teory").html(data.InfoParameter);
       $("#last-measure-date").html("Ultima medición: "+data.DateText);
