@@ -16,7 +16,7 @@ $Block_Sensors = new Block_Sensors();
 $Parameters = new Parameters();
 $Blocks = new Blocks();
 
-$id = $_GET["BS"];
+$id = (float)$_GET["BS"];
 $last = $_GET["last"];
 //$id = 2;
 
@@ -60,11 +60,6 @@ while($valores = $Measurement->retornar_SELECT()){
 
     $datetmp = $valores["date"];
     
-    array_push($DataTime, $datetmp);
-    array_push($DataValue, (float)$valores["value"]);
-    
-    array_push($Data, [$valores["date"] , (float)$valores["valor"]] );
-    
     $AcumVal = $AcumVal+$valores["value"];
     if($lastID < $valores["id_measurement"]){
         $lastID = (float)$valores["id_measurement"];
@@ -84,10 +79,6 @@ $segundo = date('s',$date);
 $fechaText = "".$mesText."-".$dia." ".$hora.":".$minuto.":".$segundo;
 
 
-$DataTime = array_reverse($DataTime);
-$DataValue = array_reverse($DataValue);
-$Data = array_reverse($Data);
-
 $info_parameter = utf8_encode($ValParameters["referencia"]);
 //$info_parameter = utf8_encode("hola<div>hola 2</div>");
 
@@ -101,6 +92,31 @@ if($valMedio > $lastVal && $Block["better_up"] == 0) {
 }else {
     $message_advice = "Su agua esta en los valores medios, su utilizacion no tendra mayor repercucion en su proceso";
 }
+
+$long =0;
+
+
+$Measurement->get_sinceId ($Block["id_sensor"], $last);
+
+while($valores = $Measurement->retornar_SELECT()){
+    $datetmp = $valores["date"];
+    
+    array_push($DataTime, $datetmp);
+    array_push($DataValue, (float)$valores["value"]);
+    
+    array_push($Data, [$valores["date"] , (float)$valores["valor"]] );
+    
+    if($lastID < $valores["id_measurement"]){
+        $lastID = (float)$valores["id_measurement"];
+        $lastVal = (float)$valores["value"];
+        $lastdate = $valores["date"];
+    }
+    $long++;
+}
+
+$DataTime = array_reverse($DataTime);
+$DataValue = array_reverse($DataValue);
+$Data = array_reverse($Data);
 
 
 $arr = array('IdBlockSensor'=> $id, 'SensorName' => $Sensor_name , 'Data' => [ 'Value' => $DataValue , 'Date' => $DataTime ],'Unit'=>$Unit , 'Last' => [ 'Id' => $lastID, 'Value'=> $lastVal, 'Date' => $lastdate], 'DateText' => $fechaText, 'RefreshFrequencySeg' => $Freq_Refresh, 'MaxValue' => $valMax, 'MinValue' => $valMin, 'MeanValue' => $valMedio, 'Long' => $long, 'LMP' => $LimSup, 'LMR' => $LimInf, 'InfoParameter' => $info_parameter, 'MessageAdvice' => $message_advice );

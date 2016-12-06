@@ -2,10 +2,13 @@
 var generalChart;
 var adviceChart;
 
-// Variable que contendra el ciclo de actualizacion
+// Variables para el ciclo de actualizacion
+var actualizarSensor=null;
+var lastId = 0;
 
 // Se crea como variable global para poder visualizarla en la consola
 var Data = [];
+var slides = 4;
 
 $(function () {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
@@ -70,7 +73,6 @@ $(function () {
     // Generando los cambios de informacion del sensor
     
     // Cambiando la informacion general
-    var slides = 4;
     for(a=1; a<=slides; a++){
       $("#parameter-name-"+a).html(data.SensorName);
 
@@ -158,6 +160,10 @@ $(function () {
 
     adviceChart = Highcharts.stockChart('container2',OptionChart);
 
+
+    lastId = data.Last.Id;
+    clearInterval(actualizarSensor);
+    actualizarProceso=setInterval('DataSensorUpdate('+data.IdBlockSensor+')', (data.RefreshFrequencySeg*1000));
 
   });
 });

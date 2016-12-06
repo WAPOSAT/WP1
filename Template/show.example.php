@@ -127,15 +127,16 @@
 
   <script type="text/javascript">
     // Configuracion del tiempo de cambio en el slide
-    $('.carousel').carousel({
+    /*$('.carousel').carousel({
       interval: 1000 * 10
     });
-    
+    */
     // obteniendo la varible GET
     var ID_BS = <?php echo $id ?>;
 
   </script>
 
+  <script type="text/javascript" src="index/print.datasensor.update.js"></script>
   <script type="text/javascript" src="index/print.datasensor.js"></script>
 
 </body>

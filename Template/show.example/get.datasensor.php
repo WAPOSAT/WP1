@@ -16,7 +16,7 @@ $Block_Sensors = new Block_Sensors();
 $Parameters = new Parameters();
 $Blocks = new Blocks();
 
-$id = $_GET["BS"];
+$id = (float)$_GET["BS"];
 //$id = 2;
 
 //$time = $_GET["time_type"];
