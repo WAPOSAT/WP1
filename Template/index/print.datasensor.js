@@ -17,8 +17,8 @@ $(function () {
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
       var d1 = new Date(data.Data.Date[a]);
-      var d2 = Date.UTC(2013,5,2,d1.getHours(),d1.getMinutes(),d1.getSeconds())
-      console.log(d2);
+      var d2 = Date.UTC(2013,5,2,d1.getHours(),d1.getMinutes(),d1.getSeconds());
+      if(a==2){alert(d2);}
 
       var d = new Date(data.Data.Date[a]).getTime();
       Data.push([d, data.Data.Value[a]]);
