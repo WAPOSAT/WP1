@@ -17,7 +17,6 @@ $(function () {
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
       var d = new Date(data.Data.Date[a]).getTime();
-      if(a==2){alert(d);}
       Data.push([d, data.Data.Value[a]]);
     }
 
