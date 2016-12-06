@@ -14,7 +14,7 @@ $(function () {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
     
     // Generando la data para la grafica
-    for (a=0;a<data.Data.Value.length ;a++){
+    for (var a=0;a<data.Data.Value.length ;a++){
       var d = new Date(data.Data.Date[a]).getTime();
       Data.push([d, data.Data.Value[a]]);
     }
