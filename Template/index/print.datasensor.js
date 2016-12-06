@@ -16,8 +16,8 @@ $(function () {
     $("#last-sensor-value").html(data.Last.Value);
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
-      if(a==2){alert("encontrado");}
       var d = new Date(data.Data.Date[a]).getTime();
+      if(a==2){alert(d);}
       Data.push([d, data.Data.Value[a]]);
     }
 
