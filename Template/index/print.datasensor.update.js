@@ -1,11 +1,9 @@
 // Esta parte es activada desde print.datasensor.js
 
 function DataSensorUpdate (id_bs){
-	
 	// Solicitando los ultimos datos del sensor
 	$.getJSON('show.example/get.datasensor.update.php?BS='+id_bs+'&last='+lastId, function (data) {
 		if(data.Long>0){
-
 			// Cargando nuevos valores en las graficas
 		for (var a=0;a<data.Data.Value.length ;a++){
 	      
@@ -19,9 +17,8 @@ function DataSensorUpdate (id_bs){
 	      adviceChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true,true);	      
 
 	    }
-
 	    // Cargando informacion dinamica
-	    for(a=1; a<=slides; a++){
+	    for(var a=1; a<=slides; a++){
 	        var state="btn btn-success btn-lg";
 	        var content_state = "NORMAL"
 	      if(data.Last.Value>=data.LMR && data.Last.Value<=data.LMP){
