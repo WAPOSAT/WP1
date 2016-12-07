@@ -17,12 +17,11 @@ $(function () {
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
       //var d1 = new Date(data.Data.Date[a]);
-      var d1 = new Date();
-      var d2 = Date.UTC(2013,5,2,11,20,50);
-      if(a==2){ alert(d1.getTime()); }
+      
 
-      var d = new Date(data.Data.Date[a]).getTime();
-      Data.push([d, data.Data.Value[a]]);
+      //var d = new Date(data.Data.Date[a]).getTime();
+      //Data.push([d, data.Data.Value[a]]);
+      Data.push([data.Data.Date[a], data.Data.Value[a]]);
     }
 
     // Estableciendo opciones para la visualizacion de la grafica con Limites Maximos permitidos
