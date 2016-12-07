@@ -57,7 +57,7 @@ while($valores = $Measurement->retornar_SELECT()){
     }
     $firstVal = (float)$valores["value"];
 
-    $datetmp = new DateTime ($valores["date"]);
+    $datetmp = new DateTime ($valores["date"], new DateTimeZone("UTC"));
     $dateval = $datetmp->getTimestamp()."000";
 
     array_push($DataTime, (float)$dateval);
