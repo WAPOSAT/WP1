@@ -7,10 +7,17 @@ function DataSensorUpdate (id_bs){
 		if(data.long>0){
 
 			// Cargando nuevos valores en las graficas
-			for (var a=0;a<data.Data.Value.length ;a++){
-	      var d = new Date(data.Data.Date[a]).getTime();
-	      generalChart.series[0].addPoint([d,data.Data.Value[a]],true,true);
-	      adviceChart.series[0].addPoint([d,data.Data.Value[a]],true,true);
+		for (var a=0;a<data.Data.Value.length ;a++){
+	      
+	      //Si data.Data.Date[a] se recibe como un texto del tipo '2016-03-11 11:00:00' usar lo siguiente
+	      //var d = new Date(data.Data.Date[a]).getTime();
+	      //generalChart.series[0].addPoint([d,data.Data.Value[a]],true,true);
+	      //adviceChart.series[0].addPoint([d,data.Data.Value[a]],true,true);
+
+	      //Si data.Data.Date[a] se recibe como el valor Unix  se puede utilizar asi
+				generalChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true,true);
+	      adviceChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true,true);	      
+
 	    }
 
 	    // Cargando informacion dinamica

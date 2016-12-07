@@ -99,9 +99,11 @@ $long =0;
 $Measurement->get_sinceId ($Block["id_sensor"], $last);
 
 while($valores = $Measurement->retornar_SELECT()){
-    $datetmp = $valores["date"];
     
-    array_push($DataTime, $datetmp);
+    $datetmp = new DateTime ($valores["date"], new DateTimeZone("UTC"));
+    $dateval = $datetmp->getTimestamp()."000";
+
+    array_push($DataTime, (float)$dateval);
     array_push($DataValue, (float)$valores["value"]);
     
     array_push($Data, [$valores["date"] , (float)$valores["valor"]] );

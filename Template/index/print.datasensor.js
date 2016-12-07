@@ -16,11 +16,12 @@ $(function () {
     $("#last-sensor-value").html(data.Last.Value);
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
-      //var d1 = new Date(data.Data.Date[a]);
-      
 
+      //Si data.Data.Date[a] se recibe como un texto del tipo '2016-03-11 11:00:00' usar lo siguiente
       //var d = new Date(data.Data.Date[a]).getTime();
       //Data.push([d, data.Data.Value[a]]);
+      
+      //Si data.Data.Date[a] se recibe como el valor Unix  se puede utilizar asi
       Data.push([data.Data.Date[a], data.Data.Value[a]]);
     }
 
