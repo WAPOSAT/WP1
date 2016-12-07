@@ -54,8 +54,8 @@
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center" >
             
-            <div class="col-md-8 col-md-offset-2 col-xs-12 ">
-              <div id="container" style="height: 350px" ></div>  
+            <div class="col-md-offset-2 col-xs-12 ">
+              <div id="container" class="col-md-8" style="height: 350px; " ></div>  
             </div>
           </div>
         </div>
@@ -85,22 +85,26 @@
       <!--  Cuarta Vista -->
       <div class="item">
         <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
+          <!-- 
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-4" ></strong> <button id="parameter-state-4" type="button" class="btn btn-success"></button>
           </div>
+          -->
           <div class="col-md-6 col-md-offset-1 col-xs-12 ">
-            <div id="container2" style="height: 250px" ></div>  
+            <div id="container2" style="height: 350px" ></div>  
           </div>
           <div class="col-md-5 col-xs-12 text-justify">
             <div class="col-md-7 col-xs-7" >
               <p id="advice"></p>
             </div>
+            <!--
             <div class="col-md-7 col-xs-5 text-center">
               <p id="max-value"></p>
               <p id="mean-value"></p>
               <p id="min-value"></p>
               <p id="last-value"></p>
             </div>
+            -->
           </div>
         </div>
         <div class="col-md-12" style="height: 50px; min-width: 310px"></div>
