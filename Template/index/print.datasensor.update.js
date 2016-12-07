@@ -4,7 +4,7 @@ function DataSensorUpdate (id_bs){
 	
 	// Solicitando los ultimos datos del sensor
 	$.getJSON('show.example/get.datasensor.update.php?BS='+id_bs+'&last='+lastId, function (data) {
-		if(data.long>0){
+		if(data.Long>0){
 
 			// Cargando nuevos valores en las graficas
 		for (var a=0;a<data.Data.Value.length ;a++){
@@ -47,6 +47,7 @@ function DataSensorUpdate (id_bs){
 
       $("#advice").html(data.MessageAdvice);
 
+      lastId = data.Last.Id;
 			
 		}
 

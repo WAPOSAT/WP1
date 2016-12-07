@@ -43,6 +43,7 @@
           </div>
           <div id="last-sensor-value" class="col-md-12 text-center"> 
           </div>
+          <div id="last-measure-date" class="col-md-12 text-center" ></div>
         </div>
         <div  class="col-md-12" style="height: 50px; min-width: 310px"></div>
       </div>
@@ -51,13 +52,10 @@
       <!--  Segunda Vista -->
       <div class="item">
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
-          <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name-2" ></strong> <button id="parameter-state-2" type="button" class="btn btn-success"></button>
-          </div>
           <div class="col-md-12 text-center" >
-            <div id="last-measure-date" class="col-md-12" ></div>
+            
             <div class="col-md-8 col-md-offset-2 col-xs-12 ">
-              <div id="container" style="height: 250px" ></div>  
+              <div id="container" style="height: 350px" ></div>  
             </div>
           </div>
         </div>
