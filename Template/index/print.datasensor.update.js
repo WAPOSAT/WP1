@@ -13,8 +13,8 @@ function DataSensorUpdate (id_bs){
 	      //adviceChart.series[0].addPoint([d,data.Data.Value[a]],true,true);
 
 	      //Si data.Data.Date[a] se recibe como el valor Unix  se puede utilizar asi
-				generalChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true,true);
-	      adviceChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true,true);	      
+				generalChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true);
+	      adviceChart.series[0].addPoint([data.Data.Date[a],data.Data.Value[a]],true);	      
 
 	    }
 	    // Cargando informacion dinamica
