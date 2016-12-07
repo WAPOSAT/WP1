@@ -17,7 +17,7 @@ $(function () {
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
       var d1 = new Date(data.Data.Date[a]);
-      var d2 = Date.UTC(2013,5,2);
+      var d2 = Date.UTC(2013,5,2,11,15,50);
       if(a==2){alert(d2);}
 
       var d = new Date(data.Data.Date[a]).getTime();
