@@ -19,7 +19,7 @@ $(function () {
       //var d1 = new Date(data.Data.Date[a]);
       var d1 = new Date();
       var d2 = Date.UTC(2013,5,2,11,20,50);
-      if(a==2){ alert(d1.getHours()); }
+      if(a==2){ alert(data.Data.Date[a]); }
 
       var d = new Date(data.Data.Date[a]).getTime();
       Data.push([d, data.Data.Value[a]]);
