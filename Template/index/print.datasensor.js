@@ -13,7 +13,35 @@ var slides = 4;
 $(function () {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
     
+    // Analisando la informacion obtenida
+    var state="btn btn-success btn-lg";
+    var content_state = "NORMAL"
+    var state_color = "#449d44";
+    if(data.Last.Value>=data.LMR && data.Last.Value<=data.LMP){
+      state="btn btn-warning btn-lg";
+      content_state = "CUIDADO";
+      state_color = "#ec971f";
+    }else if(data.Last.Value>data.LMP){
+      state="btn btn-danger btn-lg";
+      content_state = "PELIGRO!!";
+      state_color = "#c9302c";
+    }
+
+    // Cambiando la informacion general
+    for(var a=1; a<=slides; a++){
+      $("#parameter-name-"+a).html(data.SensorName);
+      $("#parameter-state-"+a).removeClass();
+      $("#parameter-state-"+a).addClass(state);
+      $("#parameter-state-"+a).html(content_state);
+    }
+
+    // SCREEN 1
+    $("#last-measure-date").html("Ultima medición: "+data.DateText);
     $("#last-sensor-value").html(data.Last.Value);
+
+    // SCREEN 2
+
+    
     // Generando la data para la grafica
     for (var a=0;a<data.Data.Value.length ;a++){
 
@@ -28,7 +56,7 @@ $(function () {
     // Estableciendo opciones para la visualizacion de la grafica con Limites Maximos permitidos
     var OptionChart = {
       rangeSelector: {
-          selected: 1
+          selected: 1,
       },
 
       title: {
@@ -76,43 +104,21 @@ $(function () {
 
     generalChart = Highcharts.stockChart('container', OptionChart);
 
-    // Generando los cambios de informacion del sensor
     
-    // Cambiando la informacion general
-    for(var a=1; a<=slides; a++){
-      $("#parameter-name-"+a).html(data.SensorName);
-
-        var state="btn btn-success btn-lg";
-        var content_state = "NORMAL"
-      if(data.Last.Value>=data.LMR && data.Last.Value<=data.LMP){
-        state="btn btn-warning btn-lg";
-        content_state = "CUIDADO"
-      }else if(data.Last.Value>data.LMP){
-        state="btn btn-danger btn-lg";
-        content_state = "PELIGRO!!"
-      }
-
-      $("#parameter-state-"+a).removeClass();
-      $("#parameter-state-"+a).addClass(state);
-      $("#parameter-state-"+a).html(content_state);
-    }
-
+    // SCREEN 3
+    $("#parameter-teory").html(data.InfoParameter);
       
 
-      $("#parameter-teory").html(data.InfoParameter);
-      $("#last-measure-date").html("Ultima medición: "+data.DateText);
-
-      $("#max-value").html("<strong class='max'>Maximo:</strong>"+data.MaxValue+" "+data.Unit);
-      $("#mean-value").html("<strong class='mean'>Media:</strong>"+data.MeanValue+" "+data.Unit);
-      $("#min-value").html("<strong class='min'>Minimo:</strong>"+data.MinValue+" "+data.Unit);
-      $("#last-value").html("<strong class='last'>Ultimo:</strong>"+data.Last.Value+" "+data.Unit);
-
-      $("#advice").html(data.MessageAdvice);
-
+    // SCREEN 4
+    
     // Estableciendo visualizacion para la vista de la grafica con Maximo-Minimo
     OptionChart = {
       rangeSelector: {
           selected: 1
+      },
+
+      navigator: {
+          enabled: false
       },
 
       title: {
@@ -137,7 +143,7 @@ $(function () {
               dashStyle: 'shortdash',
               width: 2,
               label: {
-                  text: 'Punto Medio'
+                  text: 'Media Total'
               }
           }, {
               value: data.MaxValue,
@@ -167,6 +173,18 @@ $(function () {
     };  
 
     adviceChart = Highcharts.stockChart('container2',OptionChart);
+
+    $("#screen-4").css("background-color",state_color);
+    $("#footer-screen-4").css("background-color",state_color);
+    adviceChart.chartBackground.attr({fill:state_color});
+    $("#advice").html(data.MessageAdvice);
+    /*
+    $("#max-value").html("<strong class='max'>Maximo:</strong>"+data.MaxValue+" "+data.Unit);
+    $("#mean-value").html("<strong class='mean'>Media:</strong>"+data.MeanValue+" "+data.Unit);
+    $("#min-value").html("<strong class='min'>Minimo:</strong>"+data.MinValue+" "+data.Unit);
+    $("#last-value").html("<strong class='last'>Ultimo:</strong>"+data.Last.Value+" "+data.Unit);
+    */
+
 
 
     lastId = data.Last.Id;
