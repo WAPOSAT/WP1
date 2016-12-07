@@ -58,8 +58,9 @@ while($valores = $Measurement->retornar_SELECT()){
     $firstVal = (float)$valores["value"];
 
     $datetmp = new DateTime ($valores["date"]);
-    
-    array_push($DataTime, $datetmp->getTimestamp());
+    $dateval = $datetmp->getTimestamp()."000";
+
+    array_push($DataTime, (float)$dateval);
     array_push($DataValue, (float)$valores["value"]);
     
     array_push($Data, [$valores["date"] , (float)$valores["valor"]] );
