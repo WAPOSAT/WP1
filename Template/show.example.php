@@ -41,7 +41,7 @@
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
           </div>
-          <div id="last-sensor-value" class="col-md-12 text-center"> 
+          <div id="last-sensor-value-1" class="col-md-12 text-center"> 
           </div>
           <div id="last-measure-date" class="col-md-12 text-center" ></div>
         </div>
@@ -52,10 +52,14 @@
       <!--  Segunda Vista -->
       <div class="item">
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
+          <div class="col-md-12 text-center parameter-info">
+            <div id="last-sensor-value-2" class="col-md-12 text-center">
+            </div> 
+          </div>
           <div class="col-md-12 text-center" >
             
             <div class="col-md-offset-2 col-xs-12 ">
-              <div id="container" class="col-md-8" style="height: 350px; " ></div>  
+              <div id="container" class="col-md-8" style="height: 300px; " ></div>  
             </div>
           </div>
         </div>
@@ -66,7 +70,7 @@
       <div class="item">
         <div id="screen-3" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name-3" ></strong> <button id="parameter-state-3" type="button" class="btn btn-success"></button>
+            <strong id="parameter-name-3" ></strong>=<strong id="last-sensor-value-3" ></strong> <button id="parameter-state-3" type="button" class="btn btn-success"></button>
           </div>
           <div id="parameter-teory" class="col-md-8 col-md-offset-2 col-xs-12">
             
@@ -90,12 +94,14 @@
             <strong id="parameter-name-4" ></strong> <button id="parameter-state-4" type="button" class="btn btn-success"></button>
           </div>
           -->
+          <div style="height: 30px" ></div>
           <div class="col-md-6 col-md-offset-1 col-xs-12 ">
             <div id="container2" style="height: 350px" ></div>  
           </div>
           <div class="col-md-5 col-xs-12 text-justify">
             <div class="col-md-7 col-xs-7" >
               <p id="advice"></p>
+              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center">
             </div>
             <!--
             <div class="col-md-7 col-xs-5 text-center">

@@ -33,11 +33,12 @@ $(function () {
       $("#parameter-state-"+a).removeClass();
       $("#parameter-state-"+a).addClass(state);
       $("#parameter-state-"+a).html(content_state);
+
+      $("#last-sensor-value-"+a).html(data.Last.Value+' '+data.Unit);
     }
 
     // SCREEN 1
     $("#last-measure-date").html("Ultima medición: "+data.DateText);
-    $("#last-sensor-value").html(data.Last.Value);
 
     // SCREEN 2
 
