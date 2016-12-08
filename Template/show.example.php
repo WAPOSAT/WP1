@@ -16,9 +16,10 @@
   <script src="../js/stock/highstock.js"></script>
   <script src="../js/stock/modules/exporting.js"></script>
   <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBLnlAQH441DxvN2xRinRYC3hyQ_5BGJGE" async="" defer="defer" type="text/javascript"></script>
+  
 
 </head>
-<body>
+<body onload="print_datasensor()">
   
   <div id="header" class="col-md-12" >
   <!-- Navigation -->
@@ -171,13 +172,6 @@
   <script type="text/javascript" src="index/maps.singleMark.js"></script>
   <script type="text/javascript" src="index/print.datasensor.update.js"></script>
   <script type="text/javascript" src="index/print.datasensor.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      print_datasensor();
-
-    });
-  </script>
 
 </body>
 </html>
