@@ -36,7 +36,7 @@
       
 
     <!--  Primera Vista -->
-      <div class="item">
+      <div class="item active">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
@@ -50,7 +50,7 @@
 
 
       <!--  Segunda Vista -->
-      <div class="item active">
+      <div class="item">
         <div id="screen-2" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center" >
             
