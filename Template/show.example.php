@@ -172,5 +172,12 @@
   <script type="text/javascript" src="index/print.datasensor.update.js"></script>
   <script type="text/javascript" src="index/print.datasensor.js"></script>
 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      print_datasensor();
+
+    });
+  </script>
+
 </body>
 </html>

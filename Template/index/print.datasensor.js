@@ -10,7 +10,7 @@ var lastId = 0;
 var Data = [];
 var slides = 5;
 
-$(function () {
+function print_datasensor() {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
     
     // Analisando la informacion obtenida
@@ -197,4 +197,4 @@ $(function () {
     actualizarProceso=setInterval('DataSensorUpdate('+data.IdBlockSensor+')', (data.RefreshFrequencySeg*1000));
 
   });
-});
+}
