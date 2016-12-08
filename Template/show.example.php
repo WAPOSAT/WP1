@@ -47,7 +47,7 @@
         </div>
         <div  class="col-md-12" style="height: 50px; min-width: 310px"></div>
       </div>
-
+      <!-- Fin Primera Vista -->
 
       <!--  Segunda Vista -->
       <div class="item">
@@ -65,6 +65,7 @@
         </div>
         <div class="col-md-12" style="height: 50px; min-width: 310px"></div>
       </div>
+      <!-- Fin Segunda Vista -->
 
       <!--  Tercera Vista -->
       <div class="item">
@@ -84,7 +85,7 @@
         </div>
         <div class="col-md-12" style="height: 50px; min-width: 310px"></div>
       </div>
-
+      <!-- Fin Tercera Vista -->
 
       <!--  Cuarta Vista -->
       <div class="item">
@@ -101,7 +102,7 @@
           <div class="col-md-5 col-xs-12 text-justify">
             <div class="col-md-7 col-xs-7" >
               <p id="advice"></p>
-              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center">
+              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
             </div>
             <!--
             <div class="col-md-7 col-xs-5 text-center">
@@ -115,17 +116,54 @@
         </div>
         <div id="footer-screen-4" class="col-md-12" style="height: 50px; min-width: 310px"></div>
         
+
       </div>
-      <!--  Final de las vistas -->
+      <!-- Fin Cuarta Vista -->
+
+      <!--  Quinta Vista -->
+      <div class="item">
+        <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
+          
+          <div style="height: 30px" ></div>
+          <div class="col-md-6 col-md-offset-1 col-xs-12 ">
+            <div id="container2" style="height: 350px" ></div>  
+          </div>
+          <div class="col-md-5 col-xs-12 text-justify">
+            <div class="col-md-7 col-xs-7" >
+              <p id="advice"></p>
+              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
+            </div>
+            <!--
+            <div class="col-md-7 col-xs-5 text-center">
+              <p id="max-value"></p>
+              <p id="mean-value"></p>
+              <p id="min-value"></p>
+              <p id="last-value"></p>
+            </div>
+            -->
+          </div>
+        </div>
+        <div id="footer-screen-4" class="col-md-12" style="height: 50px; min-width: 310px"></div>
+        
+
+      </div>
+      <!-- Fin Quinta Vista -->
 
 
-    </div>       
+      <!-- Fin de las Vistas -->
+
+
+    </div>
+
+    <!-- Botones laterales -->      
     <a class="left carousel-control" href="#" onclick="$('#myCarousel').carousel('prev')">
       <span class="icon-prev"></span>
     </a>
     <a class="right carousel-control" href="#" onclick="$('#myCarousel').carousel('next')">
       <span class="icon-next"></span>
     </a>
+    <!-- Fin de Botones laterales -->
+
   </div>
 
   
