@@ -102,8 +102,16 @@ if($valMedio > $lastVal && $Block["better_up"] == 0) {
     $message_advice = "Su agua esta en los valores medios, su utilizacion no tendra mayor repercucion en su proceso";
 }
 
+$map_zoom  = 16;
+$map_LatCenter = -12.01109;
+$map_LngCenter = -77.050624;
 
-$arr = array('IdBlockSensor'=> $id, 'SensorName' => $Sensor_name , 'Data' => [ 'Value' => $DataValue , 'Date' => $DataTime ],'Unit'=>$Unit , 'Last' => [ 'Id' => $lastID, 'Value'=> $lastVal, 'Date' => $lastdate], 'DateText' => $fechaText, 'RefreshFrequencySeg' => $Freq_Refresh, 'MaxValue' => $valMax, 'MinValue' => $valMin, 'MeanValue' => $valMedio, 'Long' => $long, 'LMP' => $LimSup, 'LMR' => $LimInf, 'InfoParameter' => $info_parameter, 'MessageAdvice' => $message_advice );
+$LatPoint = -12.01109;
+$LngPoint = -77.050624;
+
+
+
+$arr = array('IdBlockSensor'=> $id, 'SensorName' => $Sensor_name , 'Data' => [ 'Value' => $DataValue , 'Date' => $DataTime ],'Unit'=>$Unit , 'Last' => [ 'Id' => $lastID, 'Value'=> $lastVal, 'Date' => $lastdate], 'DateText' => $fechaText, 'RefreshFrequencySeg' => $Freq_Refresh, 'MaxValue' => $valMax, 'MinValue' => $valMin, 'MeanValue' => $valMedio, 'Long' => $long, 'LMP' => $LimSup, 'LMR' => $LimInf, 'InfoParameter' => $info_parameter, 'MessageAdvice' => $message_advice, 'Map' => [ 'Option' =>['zoom'=> $map_zoom, 'LatCenter'=> $map_LatCenter, 'LngCenter'=> $map_LngCenter ], 'Marker' => ['Lat'=> $LatPoint , 'Lng'=> $LngPoint ] ] );
 
 echo json_encode($arr);
 //echo json_encode($result);

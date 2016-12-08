@@ -59,7 +59,7 @@ function DataSensorUpdate (id_bs){
 	    $("#min-value").html("<strong class='min'>Minimo:</strong>"+data.MinValue+" "+data.Unit);
 	    $("#last-value").html("<strong class='last'>Ultimo:</strong>"+data.Last.Value+" "+data.Unit);
 	    */
-
+	    
       lastId = data.Last.Id;
 			
 		}

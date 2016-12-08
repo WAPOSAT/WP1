@@ -8,7 +8,7 @@ var lastId = 0;
 
 // Se crea como variable global para poder visualizarla en la consola
 var Data = [];
-var slides = 4;
+var slides = 5;
 
 $(function () {
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
@@ -185,6 +185,10 @@ $(function () {
     $("#min-value").html("<strong class='min'>Minimo:</strong>"+data.MinValue+" "+data.Unit);
     $("#last-value").html("<strong class='last'>Ultimo:</strong>"+data.Last.Value+" "+data.Unit);
     */
+
+    // SCREEN 5
+
+    LoadMapMark (data.Map);
 
 
 

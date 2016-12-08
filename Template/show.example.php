@@ -15,7 +15,8 @@
   <!-- Especific JS -->
   <script src="../js/stock/highstock.js"></script>
   <script src="../js/stock/modules/exporting.js"></script>
-    
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBLnlAQH441DxvN2xRinRYC3hyQ_5BGJGE" async="" defer="defer" type="text/javascript"></script>
+
 </head>
 <body>
   
@@ -31,12 +32,13 @@
       <li data-target="#myCarousel" style="background-color: #1D648E" data-slide-to="1" ></li>
       <li data-target="#myCarousel" style="background-color: #5BB598" data-slide-to="2" ></li>
       <li data-target="#myCarousel" style="background-color: #ABD099" data-slide-to="3" ></li>
+      <li data-target="#myCarousel" style="background-color: #4DB4DE" data-slide-to="4" ></li>
     </ol>
     <div class="carousel-inner" > <!-- role="listbox" -->
       
 
     <!--  Primera Vista -->
-      <div class="item active">
+      <div class="item">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
@@ -121,29 +123,13 @@
       <!-- Fin Cuarta Vista -->
 
       <!--  Quinta Vista -->
-      <div class="item">
-        <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
-          
-          <div style="height: 30px" ></div>
-          <div class="col-md-6 col-md-offset-1 col-xs-12 ">
-            <div id="container2" style="height: 350px" ></div>  
-          </div>
-          <div class="col-md-5 col-xs-12 text-justify">
-            <div class="col-md-7 col-xs-7" >
-              <p id="advice"></p>
-              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
-            </div>
-            <!--
-            <div class="col-md-7 col-xs-5 text-center">
-              <p id="max-value"></p>
-              <p id="mean-value"></p>
-              <p id="min-value"></p>
-              <p id="last-value"></p>
-            </div>
-            -->
+      <div class="item active">
+        <div id="screen-5" class="col-md-12" style="height: 400px; min-width: 310px">          
+          <div id="map-slide" class="col-md-12" style="height: 400px " >
+            
           </div>
         </div>
-        <div id="footer-screen-4" class="col-md-12" style="height: 50px; min-width: 310px"></div>
+        <div id="footer-screen-5" class="col-md-12" style="height: 50px; min-width: 310px"></div>
         
 
       </div>
@@ -182,6 +168,7 @@
 
   </script>
 
+  <script type="text/javascript" src="index/maps.singleMark.js"></script>
   <script type="text/javascript" src="index/print.datasensor.update.js"></script>
   <script type="text/javascript" src="index/print.datasensor.js"></script>
 
