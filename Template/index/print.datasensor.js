@@ -72,7 +72,7 @@ function print_datasensor() {
           load : function () {
             setInterval(function () {
               nextRange ();
-            }, 1500);
+            }, 3000);
           }
         }
       },
@@ -269,10 +269,10 @@ function changeSize(){
   } else {
     var size_val = 6;
   }
-
-  $("#last-sensor-value-1").animate({fontSize:(size_val)+"em"});
+  
+  $("#last-sensor-value-1").animate({fontSize:(size_val)+"em"}).delay(1000);
   $("#last-sensor-value-1").animate({fontSize:(size_val-1)+"em"});
-  setTimeout(changeSize, 4000);
+  setTimeout(changeSize, 5000);
 };
 
 // Analiza el tamano de la pantalla del browser y configura la variable responsive de acuerdo a eso

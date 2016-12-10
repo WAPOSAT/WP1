@@ -161,7 +161,7 @@
   <script type="text/javascript">
     // Configuracion del tiempo de cambio en el slide
     $('.carousel').carousel({
-      interval: 1000 * 10
+      interval: 1000 * 15
     });
     
     // obteniendo la varible GET
