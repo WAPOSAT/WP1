@@ -9,8 +9,17 @@ var lastId = 0;
 // Se crea como variable global para poder visualizarla en la consola
 var Data = [];
 var slides = 5;
+// si esta en 1 cuando el tamaño de la pantalla es menor a min_width y se deben considerar unos cambios
+var responsive = 0;
+// variable para controlar generalChart rangeSelector
+var rangeSelector = 0;
+
 
 function print_datasensor() {
+
+  analyse_width();
+
+
   $.getJSON('show.example/get.datasensor.php?BS='+ID_BS, function (data) {
     
     // Analisando la informacion obtenida
@@ -56,9 +65,39 @@ function print_datasensor() {
 
     // Estableciendo opciones para la visualizacion de la grafica con Limites Maximos permitidos
     var OptionChart = {
-      rangeSelector: {
-          selected: 1,
+
+      chart: {
+        type: 'spline',
+        events : {
+          load : function () {
+            setInterval(function () {
+              nextRange ();
+            }, 2500);
+          }
+        }
       },
+
+      rangeSelector: {
+        selected: 1,
+        buttons: [{
+          type: 'minute',
+          count: 10,
+          text: '10m'},
+        {
+          type: 'hour',
+          count: 1,
+          text: '1h'},
+        {
+          type: 'hour',
+          count: 8,
+          text: '8h'},
+        {
+          type: 'all',
+          text: 'All'}],
+        //inputEnabled: false,
+      },
+
+      
 
       title: {
           text: data.Unit+" vs Tiempo"
@@ -70,7 +109,7 @@ function print_datasensor() {
           },
           plotLines: [{
               value: data.LMR,
-              color: 'green',
+              color: '#ec971f', // orange
               dashStyle: 'shortdash',
               width: 2,
               label: {
@@ -78,7 +117,7 @@ function print_datasensor() {
               }
           }, {
               value: data.LMP,
-              color: 'red',
+              color: '#c9302c', // red
               dashStyle: 'shortdash',
               width: 2,
               label: {
@@ -94,9 +133,25 @@ function print_datasensor() {
           }
       },
 
+      //colors: ['#086165'],
+
       series: [{
           name: data.SensorName,
           data: Data,
+          lineWidth: 3,
+          marker: { radius: 4 },
+          zones: [{
+            value: data.LMR,
+            // Color under data.LMR
+            color: '#086165'
+          }, {
+            value: data.LMP,
+            // Color under data.LMP
+            color: '#ec971f'
+          }, {
+            // Color over data.LMP
+            color: '#c9302c'
+          }],
           tooltip: {
               valueDecimals: 2
           }
@@ -197,4 +252,48 @@ function print_datasensor() {
     actualizarProceso=setInterval('DataSensorUpdate('+data.IdBlockSensor+')', (data.RefreshFrequencySeg*1000));
 
   });
+  changeSize();
+
+}
+
+$( window ).resize(function() {
+  analyse_width();
+});
+
+// Lista de animaciones encontradas para los efectos
+function parpadear(){ $('#last-sensor-value-1').fadeIn(1000).delay(50).fadeOut(1000, parpadear) };
+
+function changeSize(){
+  if(responsive==0){
+    var size_val = 10;
+  } else {
+    var size_val = 6;
+  }
+
+  $("#last-sensor-value-1").animate({fontSize:(size_val)+"em"});
+  $("#last-sensor-value-1").animate({fontSize:(size_val-1)+"em"});
+  setTimeout(changeSize, 4000);
+};
+
+// Analiza el tamano de la pantalla del browser y configura la variable responsive de acuerdo a eso
+function analyse_width(){
+  var screen_width;
+  var min_width = 830;
+  // obtiene el tamanio de la pantalla
+  screen_width = $( window ).width();
+
+  if(screen_width<= min_width ){
+    responsive = 1;
+  } else {
+    responsive = 0;
+  }
+}
+
+function nextRange (){
+  generalChart.rangeSelector.clickButton(rangeSelector,2,true);
+  if(rangeSelector >=3){
+    rangeSelector=0;
+  } else {
+    rangeSelector++;
+  }
 }
