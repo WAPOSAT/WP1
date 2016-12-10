@@ -72,7 +72,7 @@ function print_datasensor() {
           load : function () {
             setInterval(function () {
               nextRange ();
-            }, 2500);
+            }, 1500);
           }
         }
       },

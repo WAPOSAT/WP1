@@ -39,7 +39,7 @@
       
 
     <!--  Primera Vista -->
-      <div class="item">
+      <div class="item active">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
@@ -124,7 +124,7 @@
       <!-- Fin Cuarta Vista -->
 
       <!--  Quinta Vista -->
-      <div class="item active">
+      <div class="item">
         <div id="screen-5" class="col-md-12" style="height: 400px; min-width: 310px">          
           <div id="map-slide" class="col-md-12" style="height: 400px " >
             
@@ -161,7 +161,7 @@
   <script type="text/javascript">
     // Configuracion del tiempo de cambio en el slide
     $('.carousel').carousel({
-      interval: 1000 * 10
+      interval: 1000 * 10;
     });
     
     // obteniendo la varible GET
