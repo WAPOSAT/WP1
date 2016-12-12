@@ -60,8 +60,10 @@ while($valores = $Measurement->retornar_SELECT()){
     $datetmp = new DateTime ($valores["date"], new DateTimeZone("UTC"));
     $dateval = $datetmp->getTimestamp()."000";
 
+    $valuetmp = (float)$valores["value"];
+
     array_push($DataTime, (float)$dateval);
-    array_push($DataValue, (float)$valores["value"]);
+    array_push($DataValue, round($valuetmp, 1));
     
     array_push($Data, [$valores["date"] , (float)$valores["valor"]] );
     
@@ -69,6 +71,7 @@ while($valores = $Measurement->retornar_SELECT()){
     if($lastID < $valores["id_measurement"]){
         $lastID = (float)$valores["id_measurement"];
         $lastVal = (float)$valores["value"];
+        $lastVal = round($lastVal,1);
         $lastdate = $valores["date"];
     }
     $long++;
