@@ -64,7 +64,7 @@ while($valores = $Measurement->retornar_SELECT()){
     if($lastID < $valores["id_measurement"]){
         $lastID = (float)$valores["id_measurement"];
         $lastVal = (float)$valores["value"];
-        $lastVal = round($lastVal,1);
+        $lastVal = round($lastVal,2);
         $lastdate = $valores["date"];
     }
     $long++;
