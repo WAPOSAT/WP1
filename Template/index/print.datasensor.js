@@ -16,6 +16,7 @@ var rangeSelector = 0;
 
 
 function print_datasensor() {
+  $.ajaxSetup({ cache:false });
 
   analyse_width();
 
