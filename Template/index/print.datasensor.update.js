@@ -65,4 +65,5 @@ function DataSensorUpdate (id_bs){
 		}
 
 	});
+	data = null;
 }

@@ -58,3 +58,65 @@
     background-color: #666;
   }
 }
+
+
+/* CSS PARA INDEX */
+
+.BoxLogin{
+  background-color: #ffffff;
+  border: solid 1px #bbbbbb;
+  border-radius: 3px;
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.BoxLogin input{border:0;font-weight: bold;margin-left: 10px;width: 200px}
+
+.Login{
+    width: 260px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: #FFFFFF;   
+padding: 20px; 
+text-align: center;
+border: solid 1px #dddddd;
+}
+
+.ButtonEnter{
+    
+ background-color: #b9423e;
+ padding: 0px 25px 0px 25px;
+ line-height: 36px;
+ border: 0;
+ font-size: 16px;
+ font-family: sans-serif;
+ font-weight: bold;
+ /*display: block;*/
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-top:5px;
+}
+.ButtonEnter:hover{
+  background-color: #c55552;
+}
+
+.Recordar {margin-top: 10px;margin-bottom: 10px; border:solid 0px #000000;font-family: sans-serif;font-size: 14px;height:30px}
+.Recordar label { cursor: pointer;color: #aaaaaa}
+.LoginInfo {text-align: center;color:#b4b2b3;width:280px;font-size: 13px;margin-left: auto;margin-right: auto;margin-top: 20px}
+.Respuesta {color:#a8403d;padding-top:20px }
+
+.o-wrapper {
+    transition: transform .3s;
+        min-height: 100%;
+        position:relative;
+}
+.c-menu, aside,
+.o-wrapper {
+    -webkit-transition: -webkit-transform .3s
+}

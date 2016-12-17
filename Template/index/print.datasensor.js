@@ -255,6 +255,8 @@ function print_datasensor() {
   });
   changeSize();
 
+  data = null;
+
 }
 
 $( window ).resize(function() {
