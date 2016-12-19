@@ -168,10 +168,35 @@ function print_datasensor() {
 
     // SCREEN 4
     
-    // Estableciendo visualizacion para la vista de la grafica con Maximo-Minimo
+    // Se establecen las caracteristicas de de la grafica en la vista SCREEN 4
     OptionChart = {
+      
       rangeSelector: {
-          selected: 1
+        selected: 4,
+        buttons: [{
+          type: 'hour',
+          count: 24,
+          text: '24h'},
+        {
+          type: 'day',
+          count: 7,
+          text: '1w'},
+        {
+          type: 'month',
+          count: 1,
+          text: '1m'},
+        {
+          type: 'year',
+          count: 1,
+          text: '1y'},
+        {
+          type: 'all',
+          text: 'All'}],
+        inputEnabled: false,
+      },
+
+      scrollbar:{
+        enabled: false,
       },
 
       navigator: {
@@ -192,7 +217,7 @@ function print_datasensor() {
               dashStyle: 'shortdash',
               width: 2,
               label: {
-                  text: 'Punto Minimo'
+                  text: 'Punto Mínimo'
               }
           }, {
               value: data.MeanValue,
@@ -208,7 +233,7 @@ function print_datasensor() {
               dashStyle: 'shortdash',
               width: 2,
               label: {
-                  text: 'Punto Maximo'
+                  text: 'Punto Máximo'
               }
           }]
       },
@@ -229,11 +254,12 @@ function print_datasensor() {
       }]
     };  
 
+    // Aca se genera la grafica
     adviceChart = Highcharts.stockChart('container2',OptionChart);
 
     $("#screen-4").css("background-color",state_color);
     $("#footer-screen-4").css("background-color",state_color);
-    adviceChart.chartBackground.attr({fill:state_color});
+    //adviceChart.chartBackground.attr({fill:state_color});
     $("#advice").html(data.MessageAdvice);
     /*
     $("#max-value").html("<strong class='max'>Maximo:</strong>"+data.MaxValue+" "+data.Unit);

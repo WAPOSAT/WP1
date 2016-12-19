@@ -91,30 +91,33 @@
       <!-- Fin Tercera Vista -->
 
       <!--  Cuarta Vista -->
-      <div class="item">
-        <div id="screen-4" class="col-md-12" style="height: 400px; min-width: 310px">
+      <div class="item active">
+        <div id="screen-4" class="col-md-12" style=" min-width: 310px">
           <!-- 
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-4" ></strong> <button id="parameter-state-4" type="button" class="btn btn-success"></button>
           </div>
           -->
-          <div style="height: 30px" ></div>
-          <div class="col-md-6 col-md-offset-1 col-xs-12 ">
-            <div id="container2" style="height: 350px" ></div>  
-          </div>
-          <div class="col-md-5 col-xs-12 text-justify">
-            <div class="col-md-7 col-xs-7" >
-              <p id="advice"></p>
-              <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
+          <div style="height: 30px" class="col-md-12" ></div>
+          <div id="body-4" style="background-color: #ffffff;" class="col-md-12"   >
+            
+            <div class="col-md-8  col-xs-12 ">
+              <div id="container2" style="height: 350px" ></div>  
             </div>
-            <!--
-            <div class="col-md-7 col-xs-5 text-center">
-              <p id="max-value"></p>
-              <p id="mean-value"></p>
-              <p id="min-value"></p>
-              <p id="last-value"></p>
+            <div  class="col-md-4 col-xs-12 text-justify" >
+              <div style="background-color: #ffffff; height: 300px;" class="col-md-10 col-xs-12" >
+                <p id="advice"></p>
+                <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
+              </div>
+              <!--
+              <div class="col-md-7 col-xs-5 text-center">
+                <p id="max-value"></p>
+                <p id="mean-value"></p>
+                <p id="min-value"></p>
+                <p id="last-value"></p>
+              </div>
+              -->
             </div>
-            -->
           </div>
         </div>
         <div id="footer-screen-4" class="col-md-12" style="height: 50px; min-width: 310px"></div>
@@ -124,7 +127,7 @@
       <!-- Fin Cuarta Vista -->
 
       <!--  Quinta Vista -->
-      <div class="item active">
+      <div class="item">
         <div id="screen-5" class="col-md-12" style="height: 400px; min-width: 310px">          
           <div id="map-slide" class="col-md-12" style="height: 400px " >
             
