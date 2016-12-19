@@ -51,7 +51,7 @@ function DataSensorUpdate (id_bs){
     	// SCREEN 4
     	//$("#screen-4").css("background-color",state_color);
 	    $("#footer-screen-4").css("background-color",state_color);
-	    adviceChart.chartBackground.attr({fill:state_color});
+	    //adviceChart.chartBackground.attr({fill:state_color});
 	    $("#advice").html(data.MessageAdvice);
 	    /*
 	    $("#max-value").html("<strong class='max'>Maximo:</strong>"+data.MaxValue+" "+data.Unit);
