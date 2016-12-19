@@ -170,7 +170,7 @@ function print_datasensor() {
     
     // Se establecen las caracteristicas de de la grafica en la vista SCREEN 4
     OptionChart = {
-      
+      // El selecionador de periodos
       rangeSelector: {
         selected: 4,
         buttons: [{
@@ -194,11 +194,11 @@ function print_datasensor() {
           text: 'All'}],
         inputEnabled: false,
       },
-
+      // se configura el scrollbar inferior
       scrollbar:{
         enabled: false,
       },
-
+      // se configura del navegador
       navigator: {
           enabled: false
       },
@@ -207,6 +207,7 @@ function print_datasensor() {
           text: data.Unit+" vs Tiempo"
       },
 
+      // Se definen las lineas adicionales para indicar limites
       yAxis: {
           title: {
               text: "Nivel de "+ data.SensorName
@@ -237,14 +238,14 @@ function print_datasensor() {
               }
           }]
       },
-
+      // configuracion de la posicion de la grafica
       credits: {
           position: {
               align: 'center',
               verticalAlign: 'bottom'
           }
       },
-
+      // Se ingresan los datos obtenidos
       series: [{
           name: data.SensorName,
           data: Data,
