@@ -127,7 +127,7 @@
       <!-- Fin Cuarta Vista -->
 
       <!--  Quinta Vista -->
-      <div class="item  active">
+      <div class="item active">
         <div id="screen-5" class="col-md-12" style="height: 400px; min-width: 310px">          
           <div id="map-slide" class="col-md-12" style="height: 400px " >
             
