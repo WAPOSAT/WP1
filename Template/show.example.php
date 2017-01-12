@@ -106,6 +106,7 @@
             </div>
             <div  class="col-md-4 col-xs-12 text-justify" >
               <div style="background-color: #ffffff; height: 300px;" class="col-md-10 col-xs-12" >
+                <br>
                 <p id="advice"></p>
                 <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
               </div>
