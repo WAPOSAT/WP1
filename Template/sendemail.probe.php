@@ -1,12 +1,16 @@
 <?php
-$to      = 'juan.initec@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: juan.basflo@gmail.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
 
-if(mail($to, $subject, $message, $headers)){
+$mail_To="juan.initec@gmail.com";
+$headers = "";
+$headers .= "From: juan.basflo@gmail.com\n";
+$headers .= "Reply-To: jotabeles.web@gmail.com\n";
+$headers .= "MIME-Version: 1.0\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1\n";
+$headers .= "X-Mailer: php";
+$mail_Subject = " Live TV key";
+$mail_Body = "<p>Muscle-tube</p>";
+
+if(mail($mail_To, $mail_Subject, $mail_Body,$headers)){
 	echo "OK";
 } else {
 	echo "No OK";

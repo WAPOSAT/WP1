@@ -7,6 +7,7 @@
 */
 
 var marker;
+var map;
 
 function LoadMapMark (mapa){
 	mapOptions = {
@@ -15,8 +16,8 @@ function LoadMapMark (mapa){
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  var map = new google.maps.Map(document.getElementById('map-slide'), mapOptions );
-	var infowindow = new google.maps.InfoWindow();
+  map = new google.maps.Map(document.getElementById('map-slide'), mapOptions );
+	//var infowindow = new google.maps.InfoWindow();
 	
   
 	marker = new google.maps.Marker({
@@ -27,7 +28,7 @@ function LoadMapMark (mapa){
     animation: google.maps.Animation.DROP  
   });
 
-  marker.addListener('click', toggleBounce);
+  //marker.addListener('click', toggleBounce);
   toggleBounce();
 }
 

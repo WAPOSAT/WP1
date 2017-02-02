@@ -39,7 +39,7 @@
       
 
     <!--  Primera Vista -->
-      <div class="item">
+      <div class="item active">
         <div id="screen-1" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-1" ></strong> <button id="parameter-state-1" type="button" class="btn btn-success"></button>
@@ -128,7 +128,7 @@
       <!-- Fin Cuarta Vista -->
 
       <!--  Quinta Vista -->
-      <div class="item active">
+      <div class="item ">
         <div id="screen-5" class="col-md-12" style="height: 400px; min-width: 310px">          
           <div id="map-slide" class="col-md-12" style="height: 400px " >
             
@@ -167,7 +167,15 @@
     $('.carousel').carousel({
       interval: 1000 * 15
     });
-    
+    var slide = 1;
+    $(".carousel").on('slid.bs.carousel', function(e){
+        slide++;
+        if(slide==5){
+          console.log("cargar mapa...");
+          google.maps.event.trigger(map,'resize');
+        }
+      }
+    );
     // obteniendo la varible GET
     var ID_BS = <?php echo $id ?>;
 
