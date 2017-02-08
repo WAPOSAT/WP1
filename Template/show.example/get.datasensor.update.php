@@ -26,6 +26,7 @@ $last = $_GET["last"];
     time_type= '1Week' --> to show the last week
     time_type= 'All'   --> to show all the information until now
 */
+$decimal = 2;
 
 $Block = $Block_Sensors->getblock_byId ($id);
 $ValParameters = $Parameters->getParameter_bySensor ($Block["id_sensor"]);
@@ -64,7 +65,7 @@ while($valores = $Measurement->retornar_SELECT()){
     if($lastID < $valores["id_measurement"]){
         $lastID = (float)$valores["id_measurement"];
         $lastVal = (float)$valores["value"];
-        $lastVal = round($lastVal,1);
+        $lastVal = round($lastVal,$decimal);
         $lastdate = $valores["date"];
     }
     $long++;
@@ -84,7 +85,7 @@ $info_parameter = utf8_encode($ValParameters["referencia"]);
 //$info_parameter = utf8_encode("hola<div>hola 2</div>");
 
 $valMedio = $AcumVal/$long;
-$valMedio = round($valMedio,2);
+$valMedio = round($valMedio,$decimal);
 
 if($valMedio > $lastVal && $Block["better_up"] == 0) {
     $message_advice = "Hemos detectado que la ultima medicion es menor que la media, por lo que le recomendamos utilizar el agua en este momento pues se requiere menos insumos para su preparación";
@@ -107,14 +108,14 @@ while($valores = $Measurement->retornar_SELECT()){
     $valuetmp = (float)$valores["value"];
 
     array_push($DataTime, (float)$dateval);
-    array_push($DataValue, round($valuetmp, 1));
+    array_push($DataValue, round($valuetmp, $decimal));
     
     array_push($Data, [$valores["date"] , (float)$valores["valor"]] );
     
     if($lastID < $valores["id_measurement"]){
         $lastID = (float)$valores["id_measurement"];
         $lastVal = (float)$valores["value"];
-        $lastVal = round($lastVal,1);
+        $lastVal = round($lastVal,$decimal);
         $lastdate = $valores["date"];
     }
     $long++;
