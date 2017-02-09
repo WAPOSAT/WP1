@@ -1,5 +1,7 @@
 <?php
 
+// probemos en cambio de regreso
+
 $mail_To="juan.initec@gmail.com";
 $headers = "";
 $headers .= "From: juan.basflo@gmail.com\n";
