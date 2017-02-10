@@ -9,13 +9,13 @@ class Block_Sensors {
     }
     
     public function getblock_byId ($id){
-        $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id=".$id." LIMIT 1 ";
+        $sql = "SELECT * FROM block_sensors WHERE active=1 AND id=".$id." LIMIT 1 ";
         $this->_conexion->ejecutar_sentencia($sql);
         return $this->retornar_SELECT();
     }
 
     public function getblock_Sensor ($id_block, $id_sensor){
-        $sql = "SELECT * FROM Block_Sensors WHERE active=1 AND id_block=".$id_block." AND id_sensor=".$id_sensor." ";
+        $sql = "SELECT * FROM block_sensors WHERE active=1 AND id_block=".$id_block." AND id_sensor=".$id_sensor." ";
         $this->_conexion->ejecutar_sentencia($sql);
     }    
 

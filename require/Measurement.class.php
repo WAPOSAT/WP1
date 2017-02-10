@@ -9,21 +9,21 @@ class Measurement {
     }
     
     public function get_day ($id_sensor,$date){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." AND date BETWEEN '".$date." 00:00:00' AND '".$date." 23:59:59' ORDER BY id_measurement DESC ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." AND date BETWEEN '".$date." 00:00:00' AND '".$date." 23:59:59' ORDER BY id_measurement DESC ";
     }
 
     public function get_range ($id_sensor,$date1,$date2){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." AND date BETWEEN '".$date1." 00:00:00' AND '".$date2." 23:59:59' ORDER BY id_measurement DESC ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." AND date BETWEEN '".$date1." 00:00:00' AND '".$date2." 23:59:59' ORDER BY id_measurement DESC ";
     }
 
     public function get_last ($id_sensor){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." ORDER BY id_measurement DESC LIMIT 1 ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." ORDER BY id_measurement DESC LIMIT 1 ";
         $this->_conexion->ejecutar_sentencia($sql);
         return $this->retornar_SELECT();
     }
 
     public function get_all ($id_sensor){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." ORDER BY id_measurement DESC ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." ORDER BY id_measurement DESC ";
         $this->_conexion->ejecutar_sentencia($sql);
     }
     
@@ -33,7 +33,7 @@ class Measurement {
     }
 
     public function get_24hours ($id_sensor, $date){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." AND date > DATE_SUB('".$date."', INTERVAL 1 DAY) ORDER BY id_measurement DESC ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." AND date > DATE_SUB('".$date."', INTERVAL 1 DAY) ORDER BY id_measurement DESC ";
         $this->_conexion->ejecutar_sentencia($sql);
     }
 
@@ -43,7 +43,7 @@ class Measurement {
     }
 
     public function get_sinceId ($id_sensor, $id_measurement){
-        $sql = "SELECT * FROM Measurement WHERE id_sensor=".$id_sensor." AND id_measurement>".$id_measurement." ORDER BY id_measurement DESC ";
+        $sql = "SELECT * FROM measurement WHERE id_sensor=".$id_sensor." AND id_measurement>".$id_measurement." ORDER BY id_measurement DESC ";
         $this->_conexion->ejecutar_sentencia($sql);
     }
 

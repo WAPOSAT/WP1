@@ -9,7 +9,7 @@ class Blocks {
     }
     
     public function getblock_byId ($id){
-        $sql = "SELECT * FROM Blocks WHERE active=1 AND id=".$id." LIMIT 1 ";
+        $sql = "SELECT * FROM blocks WHERE active=1 AND id=".$id." LIMIT 1 ";
         $this->_conexion->ejecutar_sentencia($sql);
         return $this->retornar_SELECT();
     }

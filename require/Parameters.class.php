@@ -9,7 +9,7 @@ class Parameters {
     }
     
     public function getParameter_bySensor ($id_sensor){
-        $sql = "SELECT * FROM Measurements_units,Parameters,Sensors,Sensor_Models WHERE Sensor_Models.id_parameter=Parameters.id_parameter AND Sensors.id_sensor_model=Sensor_Models.id_sensor_model AND Measurements_units.id_measurement_unit=Sensor_Models.id_measurement_unit AND Sensors.id_sensor='".$id_sensor."' LIMIT 1";
+        $sql = "SELECT * FROM measurements_units,parameters,sensors,sensor_models WHERE sensor_models.id_parameter=parameters.id_parameter AND sensors.id_sensor_model=sensor_models.id_sensor_model AND measurements_units.id_measurement_unit=sensor_models.id_measurement_unit AND sensors.id_sensor='".$id_sensor."' LIMIT 1";
         $this->_conexion->ejecutar_sentencia($sql);
         return $this->retornar_SELECT();
     }
