@@ -1,6 +1,7 @@
 <?php
 
 //Hola mundo de internet, aca intentare hacer magia con esta linea
+// Esta linea es de vista
 
 $mail_To="juan.initec@gmail.com";
 $headers = "";
