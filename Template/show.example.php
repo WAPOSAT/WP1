@@ -76,7 +76,7 @@
           <div class="col-md-12 text-center parameter-info">
             <strong id="parameter-name-3" ></strong>=<strong id="last-sensor-value-3" ></strong> <button id="parameter-state-3" type="button" class="btn btn-success"></button>
           </div>
-          <div id="parameter-teory" class="col-md-8 col-md-offset-2 col-xs-12">
+          <div id="parameter-teory" class="col-md-10 col-md-offset-1 col-xs-12">
             
             <!-- Contenido de la tercera vista -->
             

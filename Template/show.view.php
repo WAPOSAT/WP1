@@ -1,7 +1,3 @@
-<?php
-  $id = $_GET["ID"];
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,7 +15,7 @@
   
 
 </head>
-<body onload="print_datasensor()">
+<body>
   
   <div id="header" class="col-md-12" >
   <!-- Navigation -->
@@ -74,15 +70,34 @@
       <div class="item active">
         <div id="screen-3" class="col-md-12" style="height: 400px; min-width: 310px">
           <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name-3" ></strong>=<strong id="last-sensor-value-3" ></strong> <button id="parameter-state-3" type="button" class="btn btn-success"></button>
+            <strong id="parameter-name-3" >Parametro</strong>=<strong id="last-sensor-value-3" >valor</strong> <button id="parameter-state-3" type="button" class="btn btn-success">NORMAL</button>
           </div>
-          <div id="parameter-teory" class="col-md-8 col-md-offset-2 col-xs-12">
+          <div id="parameter-teory" class="col-md-10 col-md-offset-1 col-xs-12">
             
             <!-- Contenido de la tercera vista -->
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center">Temp: Temperatura</h3>
+                <p class="text-justify">Es un factor abiótico que regula procesos vitales para los organismos vivos, así como tambien afecta las propiedades químicas y físicas. Su influencia en la calidad del agua es debido a la relación que se establece entre temperatura y solubilidad de sales y gases, también puede afectar la habilidad del agua para retener oxígeno y la habilidad de los organismos para resistir ciertos tipos de contaminantes.</p>
+              </div>
+              <div class="col-md-2">
+                <strong class="text-center btn btn-success">[0-35oC> NORMAL</strong>
+                <p class="text-justify"> La temperatura esta en un rango normal de trabajo.</p>
+              </div>
+              <div class="col-md-2">
+                <strong class="text-center btn btn-warning"><35-37oC> ALETA</strong>
+                <p class="text-justify"> Se aumenta la solubilidad de iones y se reduce la de gases, la vida de peces se dificulta a esta temperatura.</p>
+              </div>
+              <div class="col-md-2">
+                <strong class="text-center btn btn-danger">[37-más> PELIGRO</strong>
+                <p class="text-justify"> Estas temperaturas no permiten la vida en el agua, es posible que solo algunos microrganismos lo puedan tolerar.</p>
+              </div>
+            </div>
+
+
 
 
             <!-- Fin del contenido de la tercera vista -->
-
 
           </div>
           
@@ -94,11 +109,6 @@
       <!--  Cuarta Vista -->
       <div class="item">
         <div id="screen-4" class="col-md-12" style=" min-width: 310px">
-          <!-- 
-          <div class="col-md-12 text-center parameter-info">
-            <strong id="parameter-name-4" ></strong> <button id="parameter-state-4" type="button" class="btn btn-success"></button>
-          </div>
-          -->
           <div style="height: 30px" class="col-md-12" ></div>
           <div id="body-4" style="background-color: #ffffff;" class="col-md-12"   >
             
@@ -110,14 +120,6 @@
                 <p id="advice"></p>
                 <strong>Ultimo Valor: </strong><div id="last-sensor-value-4" class="col-md-12 text-center"></div>
               </div>
-              <!--
-              <div class="col-md-7 col-xs-5 text-center">
-                <p id="max-value"></p>
-                <p id="mean-value"></p>
-                <p id="min-value"></p>
-                <p id="last-value"></p>
-              </div>
-              -->
             </div>
           </div>
         </div>
@@ -142,8 +144,6 @@
 
 
       <!-- Fin de las Vistas -->
-
-
     </div>
 
     <!-- Botones laterales -->      
@@ -156,7 +156,6 @@
     <!-- Fin de Botones laterales -->
 
   </div>
-
   
 
   <!-- Footer -->
@@ -167,10 +166,6 @@
     $('.carousel').carousel({
       interval: 1000 * 30
     });
-    
-    // obteniendo la varible GET
-    var ID_BS = <?php echo $id ?>;
-
   </script>
 
   <script type="text/javascript" src="index/maps.singleMark.js"></script>
