@@ -168,6 +168,7 @@
       interval: 1000 * 15
     });
     var slide = 1;
+    /*
     $(".carousel").on('slid.bs.carousel', function(e){
         slide++;
         if(slide==5){
@@ -175,7 +176,7 @@
           google.maps.event.trigger(map,'resize');
         }
       }
-    );
+    );*/
     // obteniendo la varible GET
     var ID_BS = <?php echo $id ?>;
 
