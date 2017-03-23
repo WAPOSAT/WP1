@@ -12,7 +12,7 @@ class conexion {
 
 //mysqli es el nuevo parte de php7
 	$this->_conexion = mysqli_connect("localhost", "user", "pasword", "database_name");
-	//$this->_base_datos = mysqli_select_db($this->_conexion,"DB2WAPOSAT");		        
+			        
 
  	}
 	public function ejecutar_sentencia ($sql) {
